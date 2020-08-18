@@ -88,11 +88,23 @@ router.put('/:id', (req, res) => {
         });
 });
 
+//GET VOTES
+router.get('/upvotes', (req, res) =>{
+    Vote.findAll().then(updatedPostData => res.json(updatedPostData))
+    .catch(err => {
+      console.log(err);
+      res.status(400).json(err);
+    });
+})
+
 //PUT AN UPVOTE
 router.put('/upvote', (req, res) => {
     // custom static method created in models/Post.js
+    console.log("Hit this point");
     Post.upvote(req.body, { Vote })
-      .then(updatedPostData => res.json(updatedPostData))
+      .then(updatedPostData => {
+        console.log(updatedPostData)
+        res.json(updatedPostData)})
       .catch(err => {
         console.log(err);
         res.status(400).json(err);
