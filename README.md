@@ -17,4 +17,4 @@ A clone of Hacker News to learn the use of ORM (Object Relational Mapping) and M
     DB_PW='your-MySQL-password'
     SECRET='your-secret'
 * use npm to install express, mysql2, sequelize, express-handlebars, express-session, express-session-sequelize, bcrypt, jest (to run test functionality)
-* use npm start to run the express server and see the results by entering 'http://localhost:3001/' sans the quotes in the search bar of your browser
+* use npm start to run the express server and see the results by entering 'localhost:3001' sans the quotes in the search bar of your browser
